@@ -49,7 +49,7 @@ WEIGHT_THRESH                   # weight threshold[s] for bad pixels
 
 #------------------------------ Photometry -----------------------------------
  
-PHOT_APERTURES   3,6,9,12,15,18,21,24,27,30,33,36,39,42             # MAG_APER aperture diameter(s) in pixels
+PHOT_APERTURES   3,6,9,12,15,18,21,24,27,30,32,36,39,42             # MAG_APER aperture diameter(s) in pixels
 PHOT_AUTOPARAMS  2.5, 3.5       # MAG_AUTO parameters: <Kron_fact>,<min_radius>
 PHOT_PETROPARAMS 2.0, 3.5       # MAG_PETRO parameters: <Petrosian_fact>,
                                 # <min_radius>
@@ -73,10 +73,10 @@ PIXEL_SCALE      0.187            # size of pixel in arcsec (0=use FITS WCS info
  
 #------------------------------ Background -----------------------------------
  
-BACK_TYPE        MANUAL           # AUTO or MANUAL
+BACK_TYPE        AUTO           # AUTO or MANUAL
 BACK_VALUE       0.0            # Default background value in MANUAL mode
 BACK_SIZE        512             # Background mesh: <size> or <width>,<height>
-BACK_FILTERSIZE  3              # Background filter: <size> or <width>,<height>
+BACK_FILTERSIZE  9              # Background filter: <size> or <width>,<height>
  
 BACKPHOTO_TYPE   GLOBAL         # can be GLOBAL or LOCAL
 BACKPHOTO_THICK  24             # thickness of the background LOCAL annulus

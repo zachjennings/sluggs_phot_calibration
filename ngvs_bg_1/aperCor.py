@@ -67,13 +67,16 @@ def make_merr_plot(data,apers,figsize=(10,5),save=False,fname='merr_plot.png',dp
     if save:
         fig.savefig(fname,dpi=dpi)
         
-def make_cog_plot(data,apers,figsize=(10,5),cor_aper=10,save=False,fname='merr_plot.png',dpi=300,ylim=(-1.0,0.2)):
+def make_cog_plot(data,apers,figsize=(10,5),cor_aper=10,save=False,fname='merr_plot.png',dpi=300,ylim=(-1.0,0.2),meas_aper=1):
     diff_arr = make_diff_arr(data,apers.shape[0],cor_aper=cor_aper)
     fig,ax = plt.subplots(figsize=figsize)
     medians = np.median(diff_arr,axis=0)
     
     ax.plot(apers,medians)
     ax.set_ylim(ylim)
+    ax.axvline(x=apers[meas_aper],color='r')
+    ax.axvline(x=apers[cor_aper],color='b')
+    
     
     if save:
         fig.savefig(fname,dpi=dpi)
