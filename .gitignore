@@ -1,2 +1,5 @@
 *.fits
 *.cat
+*.csv
+*.reg
+*.pyc
