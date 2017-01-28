@@ -20,5 +20,6 @@ example_aper.seconfig: Source extractor config file for aperture corrections. Va
 
 panstarrs_casjobs_query.sql: Sample sql query for PanSTARRS casjobs server, used for zero-pointing images. Coordinates need to be modified for particular galaxies.
 
+default.nnw and default.conv: default neural network and kernal for source extractor.
 
 
