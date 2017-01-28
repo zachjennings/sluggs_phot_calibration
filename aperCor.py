@@ -85,7 +85,7 @@ def make_diff_plot(data,good,meas_aper=2,cor_aper=10,min_plot=13,max_plot=25,n_a
     diff_arr = make_diff_arr(data,n_apers=n_apers,cor_aper=cor_aper)
     fig,ax = plt.subplots(figsize=(10,5))
     ax.scatter(data[:,meas_aper+2],diff_arr[:,meas_aper],s=0.1)
-    ax.scatter(data[good,3],diff_arr[good,meas_aper],s=10,color='b')
+    ax.scatter(data[good,meas_aper+2],diff_arr[good,meas_aper],s=10,color='b')
     ax.set_xlim(xlim)
     ax.set_ylim(ylim)
     
