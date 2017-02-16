@@ -1,0 +1,9 @@
+http://www.cadc-ccda.hia-iha.nrc-cnrc.gc.ca/data/pub/CFHTSG/NGVS_BG_2.R.weight.fits.fz?runid=mvg06ktpr1kkyc6u
+http://www.cadc-ccda.hia-iha.nrc-cnrc.gc.ca/data/pub/CFHTSG/NGVS_BG_2.R.fits?runid=mvg06ktpr1kkyc6u
+http://www.cadc-ccda.hia-iha.nrc-cnrc.gc.ca/data/pub/CFHTSG/NGVS_BG_2.R.cat?runid=mvg06ktpr1kkyc6u
+http://www.cadc-ccda.hia-iha.nrc-cnrc.gc.ca/data/pub/CFHTSG/NGVS_BG_2.I2.weight.fits.fz?runid=mvg06ktpr1kkyc6u
+http://www.cadc-ccda.hia-iha.nrc-cnrc.gc.ca/data/pub/CFHTSG/NGVS_BG_2.I2.fits?runid=mvg06ktpr1kkyc6u
+http://www.cadc-ccda.hia-iha.nrc-cnrc.gc.ca/data/pub/CFHTSG/NGVS_BG_2.I2.cat?runid=mvg06ktpr1kkyc6u
+http://www.cadc-ccda.hia-iha.nrc-cnrc.gc.ca/data/pub/CFHTSG/NGVS_BG_2.G.weight.fits.fz?runid=mvg06ktpr1kkyc6u
+http://www.cadc-ccda.hia-iha.nrc-cnrc.gc.ca/data/pub/CFHTSG/NGVS_BG_2.G.fits?runid=mvg06ktpr1kkyc6u
+http://www.cadc-ccda.hia-iha.nrc-cnrc.gc.ca/data/pub/CFHTSG/NGVS_BG_2.G.cat?runid=mvg06ktpr1kkyc6u
