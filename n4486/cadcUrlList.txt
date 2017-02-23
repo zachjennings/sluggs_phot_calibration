@@ -1,0 +1,3 @@
+http://www.cadc-ccda.hia-iha.nrc-cnrc.gc.ca/data/pub/CFHTSG/G003.187.706%2B12.391.R.fits?runid=w66vgrtcnt46i6bq
+http://www.cadc-ccda.hia-iha.nrc-cnrc.gc.ca/data/pub/CFHTSG/G003.187.706%2B12.391.G.fits?runid=w66vgrtcnt46i6bq
+http://www.cadc-ccda.hia-iha.nrc-cnrc.gc.ca/data/pub/CFHTSG/G003.187.706%2B12.391.I.fits?runid=w66vgrtcnt46i6bq
