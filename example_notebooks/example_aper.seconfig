@@ -75,7 +75,7 @@ PIXEL_SCALE      0.2            # size of pixel in arcsec (0=use FITS WCS info)
  
 BACK_TYPE        AUTO           # AUTO or MANUAL
 BACK_VALUE       0.0            # Default background value in MANUAL mode
-BACK_SIZE        512             # Background mesh: <size> or <width>,<height>
+BACK_SIZE        64             # Background mesh: <size> or <width>,<height>
 BACK_FILTERSIZE  3              # Background filter: <size> or <width>,<height>
  
 BACKPHOTO_TYPE   GLOBAL         # can be GLOBAL or LOCAL
