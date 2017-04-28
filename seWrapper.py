@@ -25,8 +25,8 @@ class seCatalog(object):
         '''
         new_catalog = np.loadtext(output_file)
 
-    def create_new_catalog_file(self,output_file,filter='g'):
-        new_catalog = np.loadtxt(output_file,comments='#')
+    def create_new_catalog_file(self,output_file,filter='g',**kwargs):
+        new_catalog = np.loadtxt(output_file,comments='#',**kwargs)
         bad = new_catalog[:,2] > 90
         new_catalog=new_catalog[~bad,:]
         ra = new_catalog[:,0]
@@ -37,6 +37,16 @@ class seCatalog(object):
         self.fwhm[filter] = new_catalog[:,3]
         self.ellipticity[filter] = new_catalog[:,4]
         self.flags[filter] = new_catalog[:,5]
+        
+    def create_new_catalog_pandas(self):
+        """
+        Read in a new catalog, using pandas to read in the data.
+        """
+        new_catalog = pd.read_csv('ngvs_bg_2_g_final.csv')
+        bad = new_catalog['mag'] > 90
+        new_catalog=new_catalog.ix[~bad,:].reset_index(drop=True)
+        ra = new_catalog[:,0]
+        dec = new_catalog[:,1]
         
     def create_new_catalog_arrs(self,ra,dec,fil,fwhm=None,mags=None,merr=None,flags=None,ellipticity=None):
         """
@@ -190,7 +200,7 @@ class seCatalog(object):
             non_detections = np.zeros(unmatched_new_coords.ra.size) + 99.999
             self.ellipticity[i] = np.concatenate([matched_ellip,unmatched_ellip,non_detections])
 
-        for i in new_catalog.mags.keys():
+        for i in new_catalog.ellipticity.keys():
             matched_ellip = new_catalog.ellipticity[i][new]
             unmatched_ellip = new_catalog.ellipticity[i][~idx_new]
             non_detections = np.zeros(unmatched_old_coords.ra.size) + 99.999
@@ -207,6 +217,18 @@ class seCatalog(object):
             unmatched_flags = new_catalog.flags[i][~idx_new]
             non_detections = np.zeros(unmatched_old_coords.ra.size) + 99.999
             self.flags[i] = np.concatenate([matched_flags,non_detections,unmatched_flags])
+            
+        for i in self.merr.keys():
+            matched_merr = self.merr[i][old]
+            unmatched_merr = self.merr[i][~idx_old]
+            non_detections = np.zeros(unmatched_new_coords.ra.size) + 99.999
+            self.merr[i] = np.concatenate([matched_merr,unmatched_merr,non_detections])
+            
+        for i in new_catalog.merr.keys():
+            matched_merr = new_catalog.merr[i][new]
+            unmatched_merr = new_catalog.merr[i][~idx_new]
+            non_detections = np.zeros(unmatched_old_coords.ra.size) + 99.999
+            self.merr[i] = np.concatenate([matched_merr,non_detections,unmatched_merr])
 
         truth = np.zeros((self.coords.ra.size,len(self.mags.keys())),dtype=bool)
         keys = self.mags.keys()
@@ -260,9 +282,3 @@ class seCatalog(object):
                 the_file.write('circle '+\
                 str(self.coords.ra.deg[good[i]])+' '+str(self.coords.dec.deg[good[i]])+' '+ \
                 size + comment + '\n')
-
-
-
-
-
-
